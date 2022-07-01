@@ -21,11 +21,14 @@ class UpdateContent extends Component {
             <article>
                 <h2>Update</h2>
                 <form
-                    action="/create_process"
+                    action="/update_process"
                     method="post"
                     onSubmit={function (e) {
                         e.preventDefault();
-                        this.props.onSubmit(this.state.id, this.state.title, this.state.desc);
+                        this.props.onSubmit(
+                            this.state.id, 
+                            this.state.title, 
+                            this.state.desc);
                     }.bind(this)}
                 >
                     <input type="hidden" name="id" value={this.state.id}></input>
